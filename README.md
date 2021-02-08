@@ -2,16 +2,37 @@
 
 how it works
 
-1. choose a category from Naver shopping mall
+1. query an item in Naver shopping mall
 
-2. scrape more than 100,000 reviews
+2. scrape more than 1,000 reviews
 
 3. process/clean the data
-    - normalize
     - remove special characters (emoji maybe...)
+    - remove duplicate (keys: date, rate, review)
+    - remove english, digits
+    - normalize repeated words (soynlp)
+    - divide via words (PyKoSpacing)
+    - divide via sentences (kss)
+    - process by spellcheck (hanspell)
 
-4. split train/test/validation 8:1:1
 
-5. train via google cloud platform NLP
+4. save it into csv
 
-6. test with specific items
+5. predict sentiment score
+    - export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"
+
+6. visualize
+    - wordcloud (konlpy)
+    - sentiment analysis scatter-plot (ggplot2)
+
+# requirements
+pandas
+numpy
+requests
+bs4
+konlpy
+pykospacing
+kss
+hanspell
+google-cloud-storage
+google-cloud-language
