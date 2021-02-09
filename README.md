@@ -22,8 +22,8 @@ how it works
     - export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"
 
 6. visualize
-    - wordcloud (konlpy)
-    - sentiment analysis scatter-plot (ggplot2)
+    - wordcloud (konlpy,stylecloud)
+    - sentiment analysis scatter-plot (seaborn)
 
 # requirements
 pandas
@@ -34,5 +34,7 @@ konlpy
 pykospacing
 kss
 hanspell
+stylecloud
+seaborn
 google-cloud-storage
 google-cloud-language
